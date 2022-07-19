@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">  </head>
+  <body>
+    <div class="container">
+      <section class="input-container">
+        <div class="logo-wrapper"><h1 class="logo">Travel App Planner</h1></div>
+        <form action="" class="form" id="form">
+          <label for="city"></label>
+          <input type="text" class="city" id="city" placeholder="Where Do You Wanna Go?"/>
+          <label for="date"></label>
+          <input type="text" id="date" class="date" placeholder="Which Date?" onfocus="(this.type='date')"/>
+          <button type="submit" class="submit" id="submit"> Go!</button>
+        </form>
+      </section>
+      <section class="results" id="results">
+        <div class="trip-info" id="trip-info">
+          <div class="destination" id="destination">
+            <!-- dynamically through JS -->
+          </div>
+          <div class="weather" id="weather">
+            <!-- dynamically through JS -->
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer> <p>Created by Nada Oteif | Udacity 2021</p> </footer>
+  <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => { 
+          navigator.serviceWorker.register("/service-worker.js"); 
+        });
+      }
+  </script>
+  </body>    
+</html>
